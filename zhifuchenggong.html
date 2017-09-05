@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<!--[if !IE]>
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    	<!--<![endif]-->
+		<title>王者试练场-支付成功</title>
+		<!--图标样式-->
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_397982_6u26dpsghjx7p66r.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="message-item-box">
+				<section class="message-item">
+					<p>尊敬的乘客您好：您所乘坐的C11203次王者大神航班马上就要起飞了</p>
+					<p>请长按下方的二维码->点击“识别二维码”，<span>加入群聊进行登机</span></p>
+				</section>
+				<section class="message-item">
+					<figure>
+						<img src="img/code-img-qun.jpg">
+						<figcaption>请您尽快登机，如遇登机问题请<a href="#">联系客服</a></figcaption>
+					</figure>
+				</section>
+				<section class="message-item">
+					<p>1、为了保证您的利益，请勿主动添加飞行员微信好友</p>
+					<p>2、如遇到飞行员主动添加您为微信好友，请向客服进行举报，如果属实我们将送上限量优惠券作为答谢</p>
+				</section>
+			</div>
+			<button class="this-long-btn">进入该机票页</button>
+		</div>
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var timer = 0;
+			$(".message-item").each(function(i){
+				timer += 100;
+				setTimeout(function(){
+					$(".message-item").eq(i).addClass("fadeInUp");
+				},timer)
+			});
+			
+		</script>
+	</body>
+</html>

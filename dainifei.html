@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<!--[if !IE]>
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    	<!--<![endif]-->
+		<title>王者试练场-带你飞</title>
+		<!--图标样式-->
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_397982_6u26dpsghjx7p66r.css" />
+		<!--picker样式-->
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--底部悬浮支付-->
+		<div class="footer-nav-pay">
+			<div class="total-money">合计 : <span>￥ 60.00</span></div>
+			<div class="pay-btn">
+				<a href="javascript:;"><span>前往支付</span></a>
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--带你飞-->
+			<div class="fly-content">
+				<header class="fly-top-image"><img src="img/fly-top.jpg" /></header>
+				<section class="fly-go-item">
+					<div class="fly-go-title">
+						<span><i class="iconfont icon-qukuai"></i>选择您的区服</span>
+					</div>
+					<div class="fly-go-main">
+						<div class="fly-go-form fly-go-server">
+							<button class="this-big-btn this-big-wx-btn">微信</button>
+							<button class="this-big-btn this-big-qq-btn">QQ</button>
+							<!--这个button不要删,对齐用的-->
+							<button class="this-big-btn this-empty-btn"></button>
+						</div>
+					</div>
+				</section>
+				<section class="fly-go-item">
+					<div class="fly-go-title">
+						<span><i class="iconfont icon-wangguan"></i>选择您的段位</span>
+					</div>
+					<div class="fly-go-main">
+						<div class="fly-go-form fly-go-section">
+							<button class="this-big-btn">王者21-30星</button>
+							<button class="this-big-btn">王者11-20星</button>
+							<button class="this-big-btn">王者0-10星</button>
+							<button class="this-big-btn">至尊星耀</button>
+							<button class="this-big-btn">永恒钻石</button>
+							<button class="this-big-btn">尊贵铂金</button>
+							<button class="this-big-btn">荣耀黄金</button>
+							<button class="this-big-btn">秩序白银</button>
+							<button class="this-big-btn">倔强青铜</button>
+						</div>
+					</div>
+				</section>
+				<section class="fly-go-item">
+					<div class="fly-go-title">
+						<span><i class="iconfont icon-feiji9"></i>飞行姿势</span>
+						<a href="javascript:;" id="showFlyPicker"><span id="showFlyPickerText" data-is="0">选择您的专属飞行姿势</span><i class="iconfont icon-right"></i></a>
+					</div>
+					<div id='flyResult' class="ui-alert"></div>
+					<div class="fly-go-main">
+						<div class="fly-go-hint" id="js-fly-go-hint" style="display: none;">
+							提示 :<span id="js-hint-text"></span>
+						</div>
+					</div>
+				</section>
+				<section class="fly-go-item">
+					<div class="fly-go-title">
+						<span><i class="iconfont icon-dianhua"></i>填写联系方式</span>
+					</div>
+					<div class="fly-go-main">
+						<div class="fly-go-form">
+							<ul class="fly-go-inputbox">
+								<li class="fly-go-input-wx">
+									<i class="iconfont icon-weixin"></i>
+									<input type="text" placeholder="请填写您的微信号（必填）" name="" id="" value="" />
+								</li>
+								<li class="fly-go-input-qq" style="display: none;">
+									<i class="iconfont icon-qq"></i>
+									<input type="tel" placeholder="请填写您的QQ号（必填）" name="" id="" value="" />
+								</li>
+								<li>
+									<i class="iconfont icon-shouji"></i>
+									<input type="tel" placeholder="请填写您的手机号（非必填）" name="" id="" value="" />
+								</li>
+							</ul>
+						</div><br />
+					</div>
+				</section>
+				<section class="fly-go-item">
+					<div class="fly-go-title">
+						<span><i class="iconfont icon-daijinquan"></i>代金券</span>
+						<a href="javascript:;" class="fly-coupons-btn"><span>3张可用代金券</span><i class="iconfont icon-right"></i></a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--优惠券弹出层-->
+		<div class="coupons-winpop-container" style="display: none;">
+			<div class="coupons-main">
+				<section class="coupons-item">
+					<div class="coupons-fl">
+						<dl>
+							<dt><strong>38</strong>元</dt>
+							<dd><span>优惠券</span>满88元使用</dd>
+						</dl>
+					</div>
+					<div class="coupons-fr">
+						<dl>
+							<dt>
+								<p>有效期：</p>
+								<p>2015-06-12  至 2018-09-06</p>
+							</dt>
+							<dd><button class="coupons-btn this-big-btn">立即使用</button></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="coupons-item">
+					<div class="coupons-fl">
+						<dl>
+							<dt><strong>1</strong>星<span>体验券</span></dt>
+							<dd><span>优惠券</span>满88元使用</dd>
+						</dl>
+					</div>
+					<div class="coupons-fr">
+						<dl>
+							<dt>
+								<p>有效期：</p>
+								<p>2015-06-12  至 2018-09-06</p>
+							</dt>
+							<dd><button class="coupons-btn this-big-btn">1元体验</button></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="coupons-item">
+					<div class="coupons-fl">
+						<dl>
+							<dt><strong>1</strong>星<span>体验券</span></dt>
+							<dd><span>优惠券</span>满88元使用</dd>
+						</dl>
+					</div>
+					<div class="coupons-fr">
+						<dl>
+							<dt>
+								<p>有效期：</p>
+								<p>2015-06-12  至 2018-09-06</p>
+							</dt>
+							<dd><button class="coupons-btn this-big-btn">1元体验</button></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="coupons-item">
+					<div class="coupons-fl">
+						<dl>
+							<dt><strong>1</strong>星<span>体验券</span></dt>
+							<dd><span>优惠券</span>满88元使用</dd>
+						</dl>
+					</div>
+					<div class="coupons-fr">
+						<dl>
+							<dt>
+								<p>有效期：</p>
+								<p>2015-06-12  至 2018-09-06</p>
+							</dt>
+							<dd><button class="coupons-btn this-big-btn">1元体验</button></dd>
+						</dl>
+					</div>
+				</section>
+				<section class="coupons-item">
+					<div class="coupons-fl">
+						<dl>
+							<dt><strong>1</strong>星<span>体验券</span></dt>
+							<dd><span>优惠券</span>满88元使用</dd>
+						</dl>
+					</div>
+					<div class="coupons-fr">
+						<dl>
+							<dt>
+								<p>有效期：</p>
+								<p>2015-06-12  至 2018-09-06</p>
+							</dt>
+							<dd><button class="coupons-btn this-big-btn">1元体验</button></dd>
+						</dl>
+					</div>
+				</section>
+			</div>
+			<button class="coupons-long-btn this-long-btn">不使用优惠券</button>
+		</div>
+
+		<!--提示信息,3秒自动消失-->
+		<!--<div class="win-dialog" style="display: none;">请选择区服</div>-->
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/dialog.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".this-big-btn").on("tap", function() {
+				//按钮点击切换颜色
+				$(this).not(".this-empty-btn").addClass("active").siblings().removeClass("active");
+
+				//点击微信按钮显示输入微信号
+				if($(this).hasClass("this-big-wx-btn")) {
+					$(".fly-go-input-wx").show().siblings(".fly-go-input-qq").hide();
+				}
+
+				//点击QQ按钮显示输入QQ号
+				if($(this).hasClass("this-big-qq-btn")) {
+					$(".fly-go-input-qq").show().siblings(".fly-go-input-wx").hide();
+				}
+			});
+
+			//给弹出层设置 高度
+			function divHeight() {
+				var winHeight = $(window).height();
+				$(".coupons-main,body,html,.coupons-winpop-container").height(winHeight);
+			}
+
+			//隐藏弹出层时还原高度
+			$(".coupons-long-btn").on("click", function() {
+				$("body,html,.coupons-winpop-container").css({
+					"overflow": "auto",
+					"height": "auto"
+				});
+				$(".coupons-winpop-container").hide();
+			});
+
+			//代金券按钮点击出现弹出层
+			function couponsHit() {
+				$(".fly-coupons-btn").on("tap", function() {
+					divHeight();
+					$("body,html,.coupons-winpop-container").css("overflow", "hidden");
+					$(".coupons-winpop-container").show();
+				});
+			}
+			couponsHit();
+
+			//处理弹出键盘会使代金券弹出层高度变小的bug
+			$(".fly-go-inputbox li input").on("focus", function() {
+				$(".fly-coupons-btn").off("tap");
+			});
+			//处理弹出键盘会使代金券弹出层高度变小的bug
+			$(".fly-go-inputbox li input").on("blur", function() {
+				couponsHit();
+			});
+
+			//点击支付按钮验证及提示信息
+			$(".pay-btn").on("click", function(e) {
+				var dataIs = $("#showFlyPickerText").attr("data-is");
+				if($(".fly-go-server").find(".active").length<1){
+					dialog("请选择区服");
+				}else if($(".fly-go-section").find(".active").length<1){
+					dialog("请选择您的段位");
+				}else if(dataIs == 0) {
+					dialog("请选择飞行姿势");
+				} else if($(".fly-go-input-wx input").val() == "" && $(".this-big-wx-btn").hasClass("active")) {
+					dialog("请填写您的微信号");
+				} else if($(".fly-go-input-qq input").val() == "" && $(".this-big-qq-btn").hasClass("active")) {
+					dialog("请填写您的QQ号");
+				}
+				e.stopPropagation();
+				
+			});
+
+			//飞行姿势选择器
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					/**
+					 * 获取对象属性的值
+					 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+					 * @param {Object} obj 对象
+					 * @param {String} param 属性名
+					 */
+					//级联示例
+					var flyPicker = new $.PopPicker({
+						layer: 2
+					});
+					flyPicker.setData([{
+						value: '1',
+						text: '提升星级',
+						children: [{
+							value: "101",
+							text: "1星"
+						}, {
+							value: "102",
+							text: "2星"
+						}, {
+							value: "103",
+							text: "3星"
+						}]
+					}, {
+						value: '2',
+						text: '固定时段',
+						children: [{
+							value: "101",
+							text: "1小时"
+						}, {
+							value: "102",
+							text: "2小时"
+						}, {
+							value: "103",
+							text: "3小时"
+						}]
+					}]);
+					var showFlyPickerButton = doc.getElementById('showFlyPicker'),
+						flyResult = doc.getElementById('flyResult'),
+						hintText = doc.getElementById('js-hint-text'),
+						flyGoHint = doc.getElementById('js-fly-go-hint'),
+						showFlyPickerText = doc.getElementById('showFlyPickerText');
+
+					showFlyPickerButton.addEventListener('click', function(event) {
+						flyPicker.show(function(items) {
+							showFlyPickerText.innerText = items[0].text + " " + items[1].text;
+							showFlyPickerText.setAttribute("data-is", "1");
+							flyGoHint.style.display = "block";
+							if(items[0].text == "固定时段") {
+								hintText.innerText = "按时间不保证胜率，但王者大神带队，你懂得~";
+							} else {
+								hintText.innerText = "提升星级，不能成功上星全额退款";
+							}
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<!--[if !IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!--<![endif]-->
+		<title>王者试练场-成为飞行员</title>
+		<!--图标样式-->
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_397982_6u26dpsghjx7p66r.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css?1" />
+		<script src="js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="sign-container">
+				<section class="sign-item">
+					<div class="sign-title">基本信息</div>
+					<ul>
+						<li><input type="text" class="this-input" placeholder="您的微信号（我们将3个工作日内与您取得联系）" id="js-wechat-id" /></li>
+						<li><input type="text" class="this-input" placeholder="飞行员代号（5个汉字以内不带特殊符号）" id="js-user-name" /></li>
+						<li>
+							<div id='js-max-result' class="ui-alert"></div>
+							<button class="this-input max-section-btn" id="js-max-section">请选择您所达到的最高段位</button>
+						</li>
+					</ul>
+				</section>
+				<section class="sign-item">
+					<div class="sign-title">手机绑定</div>
+					<ul>
+						<li>
+							<input type="tel" class="this-input phone-bind-input" placeholder="填写您的手机号" />
+							<button class="phone-bind-btn">发送验证码</button>
+							<!--<button class="phone-bind-btn phone-bind-active-btn">已发送（180）</button>-->
+						</li>
+						<li><input type="tel" class="this-input this-code-input" placeholder="填写验证码" /></li>
+						<li>
+							<label>
+                                <input type="checkbox" checked class="sign-checkbox" />
+                                <span>同意<a href="javascript:;" class="agreement-btn">《飞行员线上合作协议》</a></span>
+                            </label>
+						</li>
+					</ul>
+				</section>
+				<section class="sign-item">
+					<div class="sign-title">申请须知</div>
+					<p>1、提交成功后，管理员会在3个工作日内将您拉入飞行员考核群</p>
+					<p>2、请如实填写您所达到的段位，如虚报将直接取消资格</p>
+				</section>
+				<button class="this-long-btn sign-btn">提交申请</button>
+			</div>
+		</div>
+		<!--协议弹窗-->
+		<div class="agreement-winpop-container" style="display: none;">
+			<div class="agreement-main">
+				<p>您在注册王者试炼场（包括但不限于“王者试炼场”公众号，以下简称“王者试炼场”）与王者试炼场达成陪玩项目合作意向之前。请您务必审慎阅读、充分理解各条款内容。当您阅读并同意本协议后，即表示您已充分阅读、理解并接受本协议的全部内容，并与王者试炼场达成一致，成为王者试炼场陪玩业务合作方。阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止后续操作。如果您未申请注册流程，或者在本协议生效前已成为王者试炼场的注册用户，则您通过访问和/或使用王者试炼场公众号、网站，即视为您表示同意接受本协议的全部内容，否则请您不要访问或使用王者试炼场公众号、网站。</p>
+				<h2>第1条 专有名词</h2>
+				<p>1.1 王者试炼场：指包括“王者试炼场”公众号及其关联公众号、网站，以及其经营者的单称或合称。</p>
+				<p>1.2 乘客：通过王者试炼场发布陪玩需求并支付款项的主体。</p>
+				<p>1.3飞行员：通过王者试炼场，向用户提供陪玩服务的专业玩家（以下简称“您”）。</p>
+				<p>1.4 手机游戏：您提供陪玩业务所指向的手机游戏，包括但不限于“王者荣耀”</p>
+				<p>1.5 陪玩：根据用户的需求，由您与用户在手机游戏中组队竞技，提升用户游戏体验的服务。</p>
+				<h2>第2条 合作内容</h2>
+				<p>2.1 订单服务：用户通过王者试炼场平台发布陪玩需求后，王者试炼场对您的陪玩资质进行综合评估，若王者试炼场选择了向您分配订单，您将获取订单信息，为用户提供陪玩服务。</p>
+				<p>2.2陪玩方式：您以自身名义提供陪玩及售后服务，“王者试炼场”不参与您的经营活动；您提供陪玩及服务出现争议、纠纷、国家机关机构调查时，由您以服务者身份处理，均与王者试炼场无关。但您怠于履行义务时，王者试炼场有权介入您与用户间的争议，依据一般人的认知程度对该争议进行判断和处置，您应当予以执行。除依据本协议相关约定外，王者试炼场不直接介入您与用户之间的争议和纠纷。</p>
+				<p>2.3 业务模式不同价格不同，王者试炼场有权利对价格进行调整，如调整将会通过第三方渠道通知您（如微信群）。每完成一笔订单后，王者试炼场按照用户的付款金额与您的结算价格之间差额收取信息服务费。</p>
+				<p>2.4 结算：您根据王者试炼场提供订单完成陪玩，经用户确认并付款至王者试炼场，且无争议（包括潜在争议）后，王者试炼场将用户的付款金额扣除信息服务费后，支付给您。</p>
+				<h2>第3条 陪玩要求</h2>
+				<p>3.1 您应该保持必要的专业性（保持陪玩的胜率要求）。因您专业性不达标，王者试炼场有权拒绝向您支付结算金额。</p>
+				<p>3.2 陪玩中以下情况用户投诉将在核实后视为您违约，将对您的未结算金额（包括但不限于本次陪玩结算金额）部分或全部赔付给玩家：①怠于陪玩操作或专业性不达标，导致陪玩胜率低下；②进行长时间不必要的聊天、辱骂威胁用户；③与用户进行线下交易。</p>
+				<p>3.3 您授权王者试炼场在其自有平台及其他合作平台中使用您的肖像权（包括真人肖像及卡通肖像等）、姓名权（包括但不限于推广用名、真实姓名、笔名、网名、曾用名以及任何代表其身份的文字符号）进行宣传推广及其他商业用途或授权他人使用。</p>
+				<h2>第4条 结算</h2>
+				<p>4.1 王者试炼场根据您完成的陪玩单数，支付结算金额。</p>
+				<p>4.2 陪玩业务完成后的1天为异议期，期间用户无异议的（超过1天，用户仍回馈有异议并经查证的，王者试炼场有权就您后续陪玩结算费用部分先行扣除），王者试炼场向您支付相应的陪玩金额。</p>
+				<p>4.3 完成订单用户无异议后，结算周期为周结，第N周（周一至周日）的陪玩订单结算金额，双方在第N+1周的周三向您支付订单结算金额，如遇节假日作相应的顺延。</p>
+				<p>4.4 具体应结算陪玩金额以王者试炼场后台数据为准。</p>
+				<p>4.5 王者试炼场有权就您的陪玩金额自行或委托其他第三方进行支付。</p>
+				<p>4.6 王者试炼场与您就本协议的履行产生的税费，由双方自行承担。王者试炼场为平台方，您为实际服务提供方，王者试炼场仅就服务费部分（详见2.3条约定）金额承担纳税义务。</p>
+				<h2>第5条 其他</h2>
+				<p>5.1 因本协议履行所产生的纠纷，双方应友好协议，协商不成的，双方均可向协议签署地的人民法院提起诉讼。</p>
+				<p>5.2 王者试炼场有权将本协议项下的任何权利或义务全部或部分转让给王者试炼场关联公司，而无须另行征得您的同意。</p>
+				<p>5.3 本协议自您线上点击确认之日起生效。王者试炼场有权根据实际情况就本协议的条款进行更新，您继续使用王者试炼场相关服务的，即视为同意接受本协议更新后的全部内容。</p>
+			</div>
+			<button class="agreement-long-btn this-long-btn">关闭</button>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/dialog.js" type="text/javascript" charset="utf-8"></script>
+		<script src="gt3-php-sdk-master/static/gt.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sign.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
