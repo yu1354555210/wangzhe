@@ -623,8 +623,8 @@ textarea {
         display: block;
         font-size: 0.3rem;
         color: #333333;
-        &.justify-link{
-            span{
+        &.justify-link {
+            span {
                 .flex;
                 .flex-pack-justify;
                 .flex-align-center;
@@ -636,11 +636,11 @@ textarea {
             padding: 0.3rem 0;
             .bor-b;
         }
-        em{
+        em {
             font-style: normal;
             color: @orangeColor;
             font-size: 0.24rem;
-            &.refuse{
+            &.refuse {
                 color: #FF0000;
             }
         }
@@ -767,9 +767,8 @@ textarea {
                     }
                     input {
                         width: 100%;
-                        height: 0.9rem;
-                        line-height: 0.9rem;
-                        padding-left: 0.74rem;
+                        padding: 0.45rem 0 0.45rem 0.74rem;
+                        margin: 0;
                         background-color: #e9e9e9;
                         color: #999999;
                         font-size: 0.28rem;
@@ -781,7 +780,6 @@ textarea {
         }
     }
 }
-
 
 /**
      * 底部悬浮支付
@@ -840,7 +838,7 @@ textarea {
     width: 100%;
     .flex;
     .flex-pack-center;
-    .win-dialog{
+    .win-dialog {
         padding: 0.2rem 0.4rem;
         color: #fff;
         font-size: 0.28rem;
@@ -1248,13 +1246,13 @@ textarea {
         margin-top: 0.2rem;
         padding: 0.24rem 0.3rem;
         overflow: hidden;
-        font-size: 0.2rem;
+        font-size: 0.24rem;
         opacity: 0;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         p {
             color: #333333;
-            line-height: 0.42rem;
+            line-height: 0.35rem;
             margin-bottom: 0.2rem;
             span {
                 color: @orangeColor;
@@ -1270,7 +1268,7 @@ textarea {
             .flex-pack-center;
             .flex-v;
             img {
-                width: 1.24rem;
+                width: 1.24rem*1.5;
                 margin: 0.2rem auto;
             }
         }
@@ -1310,7 +1308,7 @@ textarea {
             }
             dd {
                 img {
-                    width: 1.6rem;
+                    width: 1.6rem*1.5;
                 }
                 figcaption {
                     a {
@@ -1342,6 +1340,13 @@ textarea {
                 }
             }
             dd {
+                figure{
+                    margin: 0 0 0.3rem;
+                    text-align: center;
+                    img {
+                        width: 1.6rem*1.5;
+                    }
+                }
                 figcaption {
                     text-align: center;
                     font-size: 0.2rem;
@@ -1578,6 +1583,7 @@ textarea {
                     border-radius: 0.05rem;
                     outline: none;
                     font-size: 0.24rem;
+                    margin: 0;
                     &::-webkit-input-placeholder {
                         color: #c1c1c1;
                     }
@@ -1616,25 +1622,27 @@ textarea {
                     background: transparent url(../img/arrow-down.png) no-repeat 95% center;
                     background-size: 15px 8.5px;
                 }
+                .agreement-btn {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 0.22rem;
+                    color: #ff0000;
+                }
                 label {
-                    display: block;
+                    display: inline-block;
                     padding: 0.15rem 0;
-                    .flex;
-                    .flex-align-center;
                     span {
                         display: inline-block;
                         vertical-align: middle;
                         color: #333333;
                         font-size: 0.22rem;
-                        a {
-                            color: #ff0000;
-                        }
                     }
                     .sign-checkbox {
                         width: 0.34rem;
                         height: 0.34rem;
                         outline: none;
-                        margin-right: 0.15rem;
+                        display: inline-block;
+                        vertical-align: middle;
                         background: url(../img/check-icon.png);
                         .bgSize;
                         &:checked {
@@ -1654,7 +1662,8 @@ textarea {
         position: relative;
     }
 }
-.max-section-btn{
+
+.max-section-btn {
     line-height: normal;
     padding: 0;
     text-align: left;

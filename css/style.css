@@ -879,9 +879,8 @@ textarea {
 }
 .fly-go-item .fly-go-main .fly-go-form .fly-go-inputbox li input {
   width: 100%;
-  height: 0.9rem;
-  line-height: 0.9rem;
-  padding-left: 0.74rem;
+  padding: 0.45rem 0 0.45rem 0.74rem;
+  margin: 0;
   background-color: #e9e9e9;
   color: #999999;
   font-size: 0.28rem;
@@ -1468,14 +1467,14 @@ textarea {
   margin-top: 0.2rem;
   padding: 0.24rem 0.3rem;
   overflow: hidden;
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   opacity: 0;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
 .message-item-box .message-item p {
   color: #333333;
-  line-height: 0.42rem;
+  line-height: 0.35rem;
   margin-bottom: 0.2rem;
 }
 .message-item-box .message-item p span {
@@ -1501,7 +1500,7 @@ textarea {
   flex-direction: column;
 }
 .message-item-box .message-item figure img {
-  width: 1.24rem;
+  width: 1.8599999999999999rem;
   margin: 0.2rem auto;
 }
 .message-item-box .message-item figcaption {
@@ -1544,7 +1543,7 @@ textarea {
   color: #333333;
 }
 .plane-message-box .plane-message-item > dl dd img {
-  width: 1.6rem;
+  width: 2.4000000000000004rem;
 }
 .plane-message-box .plane-message-item > dl dd figcaption a {
   color: #ff9c00;
@@ -1587,6 +1586,13 @@ textarea {
   background-color: #5d5d5d;
   font-size: 0.3rem;
   margin-right: 0.2rem;
+}
+.plane-message-box .plane-message-item .customer-info dd figure {
+  margin: 0 0 0.3rem;
+  text-align: center;
+}
+.plane-message-box .plane-message-item .customer-info dd figure img {
+  width: 2.4000000000000004rem;
 }
 .plane-message-box .plane-message-item .customer-info dd figcaption {
   text-align: center;
@@ -1913,6 +1919,7 @@ textarea {
   border-radius: 0.05rem;
   outline: none;
   font-size: 0.24rem;
+  margin: 0;
 }
 .sign-container .sign-item ul li .this-input::-webkit-input-placeholder {
   color: #c1c1c1;
@@ -1951,17 +1958,15 @@ textarea {
   background: transparent url(../img/arrow-down.png) no-repeat 95% center;
   background-size: 15px 8.5px;
 }
+.sign-container .sign-item ul li .agreement-btn {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.22rem;
+  color: #ff0000;
+}
 .sign-container .sign-item ul li label {
-  display: block;
+  display: inline-block;
   padding: 0.15rem 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 .sign-container .sign-item ul li label span {
   display: inline-block;
@@ -1969,14 +1974,12 @@ textarea {
   color: #333333;
   font-size: 0.22rem;
 }
-.sign-container .sign-item ul li label span a {
-  color: #ff0000;
-}
 .sign-container .sign-item ul li label .sign-checkbox {
   width: 0.34rem;
   height: 0.34rem;
   outline: none;
-  margin-right: 0.15rem;
+  display: inline-block;
+  vertical-align: middle;
   background: url(../img/check-icon.png);
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;

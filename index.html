@@ -185,8 +185,12 @@
 			<div class="loading"><span class="ani-dot">加载中</span></div>
 		</div>
 		<script src="js/zepto.min.js"></script>
+		<script src="js/fastclick.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$(".footer-nav a").on("tap",function(){
+			$(function() {
+			  FastClick.attach(document.body);
+			});
+			$(".footer-nav a").on("click",function(){
 				$(this).addClass("active").siblings().removeClass("active");
 			});
 		</script>

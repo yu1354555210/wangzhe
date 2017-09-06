@@ -1,7 +1,7 @@
 $(function() {
 
 	//点击显示协议弹窗
-	$(".agreement-btn").on("tap", function() {
+	$(".agreement-btn").on("click", function() {
 		$(".agreement-winpop-container").show();
 	});
 
@@ -17,7 +17,7 @@ $(function() {
 		countDown: 180, //180秒倒计时
 		wechatId: $("#js-wechat-id"),
 		userName: $("#js-user-name"),
-		userNameVal: /^[\u4e00-\u9fa5a-zA-Z]{1,5}$/, //飞行员代号正则
+		userNameVal: /^[\u4e00-\u9fa5a-zA-Z0-9]{1,5}$/, //飞行员代号正则
 		bingPhoneReg: /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/, //手机号 正则
 		maxSection: $("#js-max-section"),
 		bindPhone: $(".phone-bind-input"),

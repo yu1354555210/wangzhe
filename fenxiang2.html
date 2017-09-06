@@ -30,8 +30,12 @@
 			</div>
 		</div>
 		<script src="js/zepto.min.js"></script>
+		<script src="js/fastclick.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$(".share-mask").on("tap",function(){
+			$(function() {
+			  FastClick.attach(document.body);
+			});
+			$(".share-mask").on("click",function(){
 				$(this).hide();
 			});
 		</script>

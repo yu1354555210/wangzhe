@@ -176,13 +176,15 @@
 		
 		
 		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fastclick.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
-				$(".result-btn").on("tap",function(){
+			  	FastClick.attach(document.body);
+				$(".result-btn").on("click",function(){
 					$(".result-winpop-container").hide();
 				});
 				
-				$(".plane-ticket-btn").not(".active").on("tap",function(){
+				$(".plane-ticket-btn").not(".active").on("click",function(){
 					$(".result-winpop-container").show().find(".result-main").addClass("fadeInUp");
 				});
 			});
