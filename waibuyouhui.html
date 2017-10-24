@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<!--[if !IE]>
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    	<!--<![endif]-->
+		<title>王者试练场-外部优惠推广</title>
+		<!--图标样式-->
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_397982_6u26dpsghjx7p66r.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/fontrem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="sale-body-bg">
+		<div class="wrapper">
+			<div class="sale-top-img"><img src="img/sale-bg.png"/></div>
+			<div class="sale-red-packet">
+				<div class="sale-surplus">剩余8张</div>
+				<div class="sale-info">0元陪玩提升1星</div>
+				<div class="sale-href-btn">
+					<a href="#">领取代金券</a>
+					<!--<a href="#" class="active">已领取</a>-->
+				</div>
+				<p><span>段位限制</span>：永恒钻石及以下</p>
+				<p><span>有效期</span>：2015-06-12  至 2018-09-06</p>
+			</div>
+			<dl class="sale-explain">
+				<dt>使用方法</dt>
+				<dd>1、点击立即领取</dd>
+				<dd>2、下单时选择此券即可享受对应优惠</dd>
+				<dt>注意事项</dt>
+				<dd><span>1、本卡券适用于王者试炼场中王者荣耀手游陪玩服务</span></dd>
+				<dd>2、该卡券只能1人领取，不能重复领取</dd>
+			</dl>
+		</div>
+		<!--底部悬浮-->
+		<div class="sale-footer-fixed">
+			<dl>
+				<dt><img src="img/sale-logo.png"/></dt>
+				<dd>
+					<h2>王者试炼场</h2>
+					<p>王者荣耀专业陪玩平台</p>
+				</dd>
+			</dl>
+			<div class="sale-footer-btn">
+				<button>立即加入</button>
+				<i class="sale-footer-close iconfont icon-guanbi"></i>
+			</div>
+		</div>
+		<!--弹窗-->
+		<div class="sale-winpop-container">
+			<div class="sale-winpop-main">
+				<h2>长按加入，排位从此再无坑货</h2>
+				<figure>
+					<img src="img/code-img-gzh.jpg"/>
+					<figcaption>王者试炼场</figcaption>
+				</figure>
+				<div class="sale-winpop-close"><i class="iconfont icon-guanbi"></i></div>
+			</div>
+		</div>
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(".sale-footer-btn button").click(function(){
+				$(".sale-winpop-container").show();
+			});
+			
+			$(".sale-footer-close").click(function(){
+				$(".sale-footer-fixed").hide();
+			});
+			
+			$(".sale-winpop-close").click(function(){
+				$(".sale-winpop-container").hide();
+			});
+		</script>
+	</body>
+</html>
