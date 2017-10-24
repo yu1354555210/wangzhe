@@ -120,7 +120,7 @@
 		<!--优惠券弹出层-->
 		<div class="coupons-winpop-container" style="display: none;">
 			<div class="coupons-main">
-				<section class="coupons-item">
+				<section class="coupons-item coupons-item-disabled">
 					<div class="coupons-fl">
 						<dl>
 							<dt><strong>38</strong>元</dt>
@@ -217,10 +217,11 @@
 		<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/dialog.js" type="text/javascript" charset="utf-8"></script>
 		<!--解决ios微信回弹-->
-		<script src="js/inobounce.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/inobounce.min.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
 			$(function() {
 				FastClick.attach(document.body);
+				
 			});
 			$(".this-big-btn").on("click", function() {
 				//按钮点击切换颜色
@@ -241,6 +242,7 @@
 			function divHeight() {
 				var winHeight = window.screen.height;
 				$(".coupons-main,body,html,.coupons-winpop-container").height(winHeight);
+				$(".coupons-main").css("overflow","auto");
 				$("body,html,.coupons-winpop-container").css("overflow", "hidden");
 			}
 
@@ -248,8 +250,8 @@
 			$(".coupons-long-btn").on("click", function() {
 				$(".coupons-winpop-container").hide();
 				$("body,html,.coupons-winpop-container,.coupons-main").css({
-					"overflow": "auto",
-					"height": "100%"
+					"overflow": "visible",
+					"height": "auto"
 				});
 			});
 

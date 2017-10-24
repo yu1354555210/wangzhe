@@ -312,9 +312,15 @@ textarea {
 .this-long-btn:active {
   background-color: #ea9416;
 }
+.this-long-btn.this-static-btn {
+  position: static;
+}
 /**
      * 历史记录飞行员卡片
  */
+.flyer-card-box {
+  margin-bottom: 1rem;
+}
 .flyer-card-box .flyer-card-item {
   margin-top: 0.2rem;
   background-color: #fff;
@@ -515,7 +521,6 @@ textarea {
  */
 .loading {
   height: 1rem;
-  margin-bottom: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -882,10 +887,13 @@ textarea {
   padding: 0.45rem 0 0.45rem 0.74rem;
   margin: 0;
   background-color: #e9e9e9;
-  color: #999999;
+  color: #333;
   font-size: 0.28rem;
   border: none;
   border-radius: 0.05rem;
+}
+.fly-go-item .fly-go-main .fly-go-form .fly-go-inputbox li input::-webkit-input-placeholder {
+  color: #c1c1c1;
 }
 /**
      * 底部悬浮支付
@@ -1010,6 +1018,20 @@ textarea {
 .coupons-item:last-child {
   margin-bottom: 2rem;
 }
+.coupons-item.coupons-item-disabled .coupons-fl {
+  color: #999;
+}
+.coupons-item.coupons-item-disabled .coupons-fl dt span,
+.coupons-item.coupons-item-disabled .coupons-fl dd,
+.coupons-item.coupons-item-disabled .coupons-fl dd span {
+  color: #999;
+}
+.coupons-item.coupons-item-disabled .coupons-fr .coupons-btn {
+  background: #999;
+}
+.coupons-item.coupons-item-disabled .coupons-fr dd {
+  color: #999;
+}
 .coupons-item .coupons-fl {
   flex: 0 0 3.27rem;
   -webkit-flex: 0 0 3.27rem;
@@ -1048,7 +1070,7 @@ textarea {
   line-height: 0.4rem;
 }
 .coupons-item .coupons-fr dt {
-  color: #999999;
+  color: #999;
 }
 .coupons-item .coupons-fr dt p {
   font-size: 0.2rem;
@@ -1467,8 +1489,7 @@ textarea {
   margin-top: 0.2rem;
   padding: 0.24rem 0.3rem;
   overflow: hidden;
-  font-size: 0.24rem;
-  opacity: 0;
+  font-size: 0.23rem;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -1477,8 +1498,15 @@ textarea {
   line-height: 0.35rem;
   margin-bottom: 0.2rem;
 }
-.message-item-box .message-item p span {
+.message-item-box .message-item p a {
   color: #ff9c00;
+}
+.message-item-box .message-item p strong {
+  color: #ff0000;
+  font-weight: normal;
+}
+.message-item-box .message-item p:last-child {
+  margin-bottom: 0;
 }
 .message-item-box .message-item > span {
   display: block;
@@ -1500,17 +1528,19 @@ textarea {
   flex-direction: column;
 }
 .message-item-box .message-item figure img {
-  width: 1.8599999999999999rem;
-  margin: 0.2rem auto;
+  width: 3.5rem;
+  margin: 0.3rem auto;
 }
 .message-item-box .message-item figcaption {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 0.2rem;
+  font-size: 0.3rem;
+  color: #333333;
+  font-weight: bold;
 }
-.message-item-box .message-item figcaption a {
-  color: #ff9c00;
+.message-item-box .message-item figcaption span {
+  color: #FF0000;
   margin-left: 0.05rem;
 }
 /**
@@ -1856,7 +1886,13 @@ textarea {
 .coupons-box {
   overflow: hidden;
 }
+.coupons-box .coupons-tabs {
+  padding-top: 0.88rem;
+}
 .coupons-box .coupons-tabs .hd {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1914,7 +1950,7 @@ textarea {
   padding-left: 0.34rem;
   background-color: #e9e9e9;
   border: none;
-  color: #c1c1c1;
+  color: #333;
   font-size: 0.21rem;
   border-radius: 0.05rem;
   outline: none;
@@ -1930,6 +1966,9 @@ textarea {
 }
 .sign-container .sign-item ul li .this-input.this-code-input {
   width: 2.28rem;
+}
+.sign-container .sign-item ul li .this-input.max-section-btn {
+  color: #C1C1C1;
 }
 .sign-container .sign-item ul li .phone-bind-btn {
   float: right;
@@ -2078,8 +2117,7 @@ textarea {
 }
 .result-winpop-container .result-main .result-form input {
   width: 100%;
-  height: 0.9rem;
-  line-height: 0.9rem;
+  padding: 0.25rem 0 0.25rem 0.74rem;
   border: none;
   margin-bottom: 0.2rem;
   outline: none;
@@ -2142,5 +2180,222 @@ textarea {
   -webkit-animation-name: fadeInUp;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
+}
+/**
+     * 提交申请成功
+ */
+.submit-ok-box {
+  background-color: #fff;
+  margin-top: 0.2rem;
+  text-align: center;
+  color: #333333;
+  padding-bottom: 1.05rem;
+}
+.submit-ok-box strong {
+  font-size: 0.36rem;
+  font-weight: normal;
+  padding: 1.1rem 0 1rem;
+  width: 100%;
+  display: block;
+}
+.submit-ok-box p {
+  font-weight: bold;
+  font-size: 0.35rem;
+}
+.submit-ok-box p span {
+  color: #FF0000;
+}
+.submit-ok-box figure img {
+  width: 3.5rem;
+  display: inline-block;
+  margin: 0.4rem 0 0.1rem;
+}
+.submit-ok-box figure figcaption {
+  font-size: 0.29rem;
+}
+/**
+     * 外部优惠推广
+ */
+.sale-body-bg {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B3B3B3), to(#FAFAFA), color-stop(0.5, #d5d5d5));
+}
+.sale-red-packet {
+  width: 6.28rem;
+  height: 7.84rem;
+  background: url(../img/red-packet.png) no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  margin: -1.9rem auto 0;
+  position: relative;
+  z-index: 333;
+}
+.sale-red-packet .sale-surplus {
+  height: 3.5rem;
+  padding-top: 0.7rem;
+  font-size: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+.sale-red-packet .sale-info {
+  font-size: 0.56rem;
+  text-align: center;
+  color: #fcff00;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.05rem;
+}
+.sale-red-packet .sale-href-btn {
+  padding: 0 0.8rem;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+}
+.sale-red-packet .sale-href-btn a {
+  display: block;
+  width: 100%;
+  font-size: 0.46rem;
+  color: #fff;
+  background-color: #ffc000;
+  height: 1.14rem;
+  line-height: 1.14rem;
+  text-align: center;
+  border-radius: 0.1rem;
+}
+.sale-red-packet .sale-href-btn a:active {
+  background-color: #e5ae16;
+}
+.sale-red-packet .sale-href-btn a.active {
+  background-color: #ccc;
+}
+.sale-red-packet > p {
+  font-size: 0.22rem;
+  color: #fff;
+  padding-left: 0.85rem;
+  line-height: 0.4rem;
+}
+.sale-red-packet > p span {
+  color: #00fff6;
+}
+.sale-explain {
+  padding-left: 0.7rem;
+  color: #000000;
+  line-height: 0.45rem;
+  padding-bottom: 1.3rem;
+  margin-top: 0.2rem;
+}
+.sale-explain dt {
+  font-size: 0.28rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+}
+.sale-explain dd {
+  margin-bottom: 0.06rem;
+  font-size: 0.26rem;
+}
+.sale-explain dd span {
+  color: #ff0011;
+}
+.sale-footer-fixed {
+  height: 1.08rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 444;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 0.2rem 0 0.3rem;
+}
+.sale-footer-fixed dl {
+  float: left;
+}
+.sale-footer-fixed dl dt {
+  float: left;
+  width: 1.07rem;
+  height: 0.95rem;
+  margin-top: 0.06rem;
+  margin-right: 0.2rem;
+}
+.sale-footer-fixed dl dd {
+  float: left;
+  color: #fff;
+  font-size: 0.2rem;
+  line-height: 0.4rem;
+}
+.sale-footer-fixed dl dd h2 {
+  margin-top: 0.15rem;
+  font-size: 0.3rem;
+  font-weight: normal;
+}
+.sale-footer-fixed .sale-footer-btn {
+  float: right;
+}
+.sale-footer-fixed .sale-footer-btn button {
+  width: 1.86rem;
+  border: none;
+  border-radius: 0.1rem;
+  height: 0.64rem;
+  color: #fff;
+  font-size: 0.29rem;
+  background-color: #ff0000;
+}
+.sale-footer-fixed .sale-footer-btn .sale-footer-close {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.1rem;
+  color: #fff;
+  font-size: 0.42rem;
+}
+.sale-winpop-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 666;
+  display: none;
+}
+.sale-winpop-container .sale-winpop-main {
+  width: 6.3rem;
+  height: 6.82rem;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.sale-winpop-container .sale-winpop-main h2 {
+  text-align: center;
+  margin: 0.5rem 0 0.4rem;
+  font-size: 0.3rem;
+}
+.sale-winpop-container .sale-winpop-main figure {
+  color: #000;
+  text-align: center;
+}
+.sale-winpop-container .sale-winpop-main figure img {
+  display: inline-block;
+  width: 3.72rem;
+}
+.sale-winpop-container .sale-winpop-main figure figcaption {
+  font-size: 0.26rem;
+}
+.sale-winpop-container .sale-winpop-main .sale-winpop-close {
+  text-align: center;
+}
+.sale-winpop-container .sale-winpop-main .sale-winpop-close i {
+  color: #000;
+  font-size: 0.68rem;
 }
 /*# sourceMappingURL=style.css.map */

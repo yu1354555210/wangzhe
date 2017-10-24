@@ -163,7 +163,9 @@ $(function() {
 
 		showFlyPickerButton.addEventListener('click', function(event) {
 			maxPicker.show(function(items) {
+				console.log(items[0].value)
 				showFlyPickerButton.innerText = items[0].text;
+				showFlyPickerButton.style.color = "#333";
 				//返回 false 可以阻止选择框的关闭
 				//return false;
 			});

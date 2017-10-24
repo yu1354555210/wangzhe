@@ -380,6 +380,9 @@ textarea {
     &:active {
         background-color: #ea9416;
     }
+    &.this-static-btn {
+        position: static;
+    }
 }
 
 
@@ -388,6 +391,7 @@ textarea {
  */
 
 .flyer-card-box {
+    margin-bottom: 1rem;
     .flyer-card-item {
         margin-top: 0.2rem;
         background-color: #fff;
@@ -539,7 +543,6 @@ textarea {
 
 .loading {
     height: 1rem;
-    margin-bottom: 1rem;
     .flex;
     .flex-align-center;
     .flex-pack-center;
@@ -770,16 +773,20 @@ textarea {
                         padding: 0.45rem 0 0.45rem 0.74rem;
                         margin: 0;
                         background-color: #e9e9e9;
-                        color: #999999;
+                        color: #333;
                         font-size: 0.28rem;
                         border: none;
                         border-radius: 0.05rem;
+                        &::-webkit-input-placeholder {
+                            color: #c1c1c1;
+                        }
                     }
                 }
             }
         }
     }
 }
+
 
 /**
      * 底部悬浮支付
@@ -868,6 +875,7 @@ textarea {
     }
 }
 
+@color999 : #999;
 .coupons-item {
     padding: 0.68rem 0.5rem;
     height: 2.87rem;
@@ -880,6 +888,24 @@ textarea {
     .flex-align-center;
     &:last-child {
         margin-bottom: 2rem;
+    }
+    &.coupons-item-disabled {
+        .coupons-fl {
+            color: @color999;
+            dt span,
+            dd,
+            dd span {
+                color: @color999;
+            }
+        }
+        .coupons-fr {
+            .coupons-btn {
+                background: @color999;
+            }
+            dd {
+                color: @color999;
+            }
+        }
     }
     .coupons-fl {
         flex: 0 0 3.27rem;
@@ -915,7 +941,7 @@ textarea {
             line-height: 0.4rem;
         }
         dt {
-            color: #999999;
+            color: @color999;
             p {
                 font-size: 0.2rem;
             }
@@ -927,7 +953,7 @@ textarea {
                 color: #fff;
                 background-color: #ff2424;
                 &.coupons-btn-end {
-                    background-color: #999;
+                    background-color: @color999;
                 }
             }
         }
@@ -1246,16 +1272,22 @@ textarea {
         margin-top: 0.2rem;
         padding: 0.24rem 0.3rem;
         overflow: hidden;
-        font-size: 0.24rem;
-        opacity: 0;
+        font-size: 0.23rem;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         p {
             color: #333333;
             line-height: 0.35rem;
             margin-bottom: 0.2rem;
-            span {
+            a {
                 color: @orangeColor;
+            }
+            strong {
+                color: #ff0000;
+                font-weight: normal;
+            }
+            &:last-child {
+                margin-bottom: 0;
             }
         }
         &>span {
@@ -1268,17 +1300,19 @@ textarea {
             .flex-pack-center;
             .flex-v;
             img {
-                width: 1.24rem*1.5;
-                margin: 0.2rem auto;
+                width: 3.5rem;
+                margin: 0.3rem auto;
             }
         }
         figcaption {
             display: block;
             width: 100%;
             text-align: center;
-            font-size: 0.2rem;
-            a {
-                color: @orangeColor;
+            font-size: 0.3rem;
+            color: #333333;
+            font-weight: bold;
+            span {
+                color: #FF0000;
                 margin-left: 0.05rem;
             }
         }
@@ -1340,7 +1374,7 @@ textarea {
                 }
             }
             dd {
-                figure{
+                figure {
                     margin: 0 0 0.3rem;
                     text-align: center;
                     img {
@@ -1523,7 +1557,11 @@ textarea {
 .coupons-box {
     overflow: hidden;
     .coupons-tabs {
+        padding-top: 0.88rem;
         .hd {
+            position: fixed;
+            left: 0;
+            top: 0;
             width: 100%;
             .flex;
             height: 0.88rem;
@@ -1578,7 +1616,7 @@ textarea {
                     padding-left: 0.34rem;
                     background-color: #e9e9e9;
                     border: none;
-                    color: #c1c1c1;
+                    color: #333;
                     font-size: 0.21rem;
                     border-radius: 0.05rem;
                     outline: none;
@@ -1593,6 +1631,9 @@ textarea {
                     }
                     &.this-code-input {
                         width: 2.28rem;
+                    }
+                    &.max-section-btn {
+                        color: #C1C1C1;
                     }
                 }
                 .phone-bind-btn {
@@ -1726,8 +1767,7 @@ textarea {
             .bor-b;
             input {
                 width: 100%;
-                height: 0.9rem;
-                line-height: 0.9rem;
+                padding: 0.25rem 0 0.25rem 0.74rem;
                 border: none;
                 margin-bottom: 0.2rem;
                 outline: none;
@@ -1790,4 +1830,224 @@ textarea {
     -webkit-animation-name: fadeInUp;
     -webkit-animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
+}
+
+
+/**
+     * 提交申请成功
+ */
+
+.submit-ok-box {
+    background-color: #fff;
+    margin-top: 0.2rem;
+    text-align: center;
+    color: #333333;
+    padding-bottom: 1.05rem;
+    strong {
+        font-size: 0.36rem;
+        font-weight: normal;
+        padding: 1.1rem 0 1rem;
+        width: 100%;
+        display: block;
+    }
+    p {
+        font-weight: bold;
+        font-size: 0.35rem;
+        span {
+            color: #FF0000;
+        }
+    }
+    figure {
+        img {
+            width: 3.5rem;
+            display: inline-block;
+            margin: 0.4rem 0 0.1rem;
+        }
+        figcaption {
+            font-size: 0.29rem;
+        }
+    }
+}
+
+
+/**
+     * 外部优惠推广
+ */
+
+.sale-body-bg {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B3B3B3), to(#FAFAFA), color-stop(0.5, #d5d5d5));
+}
+
+.sale-red-packet {
+    width: 6.28rem;
+    height: 7.84rem;
+    background: url(../img/red-packet.png) no-repeat;
+    .bgSize;
+    margin: -1.9rem auto 0;
+    position: relative;
+    z-index: 333;
+    .sale-surplus {
+        height: 3.5rem;
+        padding-top: 0.7rem;
+        font-size: 0.5rem;
+        color: #fff;
+        text-align: center;
+    }
+    .sale-info {
+        font-size: 0.56rem;
+        text-align: center;
+        color: #fcff00;
+        margin-bottom: 0.7rem;
+        letter-spacing: 0.05rem;
+    }
+    .sale-href-btn {
+        padding: 0 0.8rem;
+        margin-bottom: 0.4rem;
+        overflow: hidden;
+        a {
+            display: block;
+            width: 100%;
+            font-size: 0.46rem;
+            color: #fff;
+            background-color: #ffc000;
+            height: 1.14rem;
+            line-height: 1.14rem;
+            text-align: center;
+            border-radius: 0.1rem;
+            &:active{
+                background-color: #e5ae16;
+                
+            }
+            &.active {
+                background-color: #ccc;
+            }
+        }
+    }
+    &>p {
+        font-size: 0.22rem;
+        color: #fff;
+        padding-left: 0.85rem;
+        line-height: 0.4rem;
+        span {
+            color: #00fff6;
+        }
+    }
+}
+
+.sale-explain {
+    padding-left: 0.7rem;
+    color: #000000;
+    line-height: 0.45rem;
+    padding-bottom: 1.3rem;
+    margin-top: 0.2rem;
+    dt {
+        font-size: 0.28rem;
+        font-weight: bold;
+        margin-bottom: 0.1rem;
+    }
+    dd {
+        margin-bottom: 0.06rem;
+        font-size: 0.26rem;
+        span {
+            color: #ff0011;
+        }
+    }
+}
+
+.sale-footer-fixed {
+    height: 1.08rem;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 444;
+    background-color: rgba(0, 0, 0, .6);
+    .flex;
+    .flex-align-center;
+    .flex-pack-justify;
+    padding: 0 0.2rem 0 0.3rem;
+    dl {
+        .fl;
+        dt {
+            .fl;
+            width: 1.07rem;
+            height: 0.95rem;
+            margin-top: 0.06rem;
+            margin-right: 0.2rem;
+        }
+        dd {
+            .fl;
+            color: #fff;
+            font-size: 0.2rem;
+            line-height: 0.4rem;
+            h2 {
+                margin-top: 0.15rem;
+                font-size: 0.3rem;
+                font-weight: normal;
+            }
+        }
+    }
+    .sale-footer-btn {
+        .fr;
+        button {
+            width: 1.86rem;
+            border: none;
+            border-radius: 0.1rem;
+            height: 0.64rem;
+            color: #fff;
+            font-size: 0.29rem;
+            background-color: #ff0000;
+        }
+        .sale-footer-close {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.1rem;
+            color: #fff;
+            font-size: 0.42rem;
+        }
+    }
+}
+
+.sale-winpop-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 666;
+    display: none;
+    .sale-winpop-main{
+        width: 6.3rem;
+        height: 6.82rem;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        h2{
+            text-align: center;
+            margin: 0.5rem 0 0.4rem;
+            font-size: 0.3rem;
+        }
+        figure{
+            color: #000;
+            text-align: center;
+            img{
+                display: inline-block;
+                width: 3.72rem;
+            }
+            figcaption{
+                font-size: 0.26rem;
+            }
+        }
+        .sale-winpop-close{
+            text-align: center;
+            i{
+                color: #000;
+                font-size: 0.68rem;
+            }
+        }
+    }
 }
